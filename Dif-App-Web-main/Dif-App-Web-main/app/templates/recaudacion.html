@@ -1,0 +1,158 @@
+{% extends 'layout.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="../static/css/recaudacion.css">
+{% endblock %}
+
+{% block javascript %}
+<script src="../static/js/app.js"></script>
+{% endblock %}
+
+{% block seccion %}
+<a href="/recaudaciones">Recaudación</a>
+{% endblock %}
+
+{% block body %}
+
+    <!-- Contenido de las secciones -->
+<div class="dashboard">
+
+    <div class="Dashb_container">
+
+        <div class="item-1" id="donaciones">
+            <div class="encabezado" id="encabezado1">
+                Donaciones
+                <span>| Total</span>
+            </div>
+            <form action="/recaudaciones_donaciones" method="get" class="sub-grid" id="sub-item1">
+                <label for="comedor">Comedor:</label>
+                <select id="comedor" name="comedor">
+                    <option value="Comedor A">Comedor A</option>
+                    <option value="Comedor B">Comedor B</option>
+                    <option value="Comedor C">Comedor C</option>
+                    <option value="Comedor D">Comedor D</option>
+                    <option value="Comedor E">Comedor E</option>
+                    <option value="Comedor F">Comedor F</option>
+                    <option value="Comedor G">Comedor G</option>
+                    <option value="Comedor H">Comedor H</option>
+                    <option value="Comedor I">Comedor I</option>
+                    <option value="Comedor J">Comedor J</option>
+                    <option value="Comedor K">Comedor K</option>
+                    <option value="Comedor L">Comedor L</option>
+                    <option value="Comedor M">Comedor M</option>
+                    <option value="Comedor N">Comedor N</option>
+                    <option value="Comedor O">Comedor O</option>
+                    <option value="Comedor P">Comedor P</option>
+                    <option value="Comedor Q">Comedor Q</option>
+                    <option value="Comedor R">Comedor R</option>
+                </select>
+            </form>
+            <div class="content-icon">
+                <img src="../static/images/donacion.png" alt="donaciones" width="95px">
+            </div>
+            <div class="content" id="content1">
+                <span class="value" id="donaciones-value">{{ recaudaciones_donaciones }}</span>
+            </div>
+        </div>
+
+        <div class="item-2" id="ventas">
+            <div class="encabezado" id="encabezado2">
+                Ventas
+                <span>| Total</span>
+            </div>
+            <form action="/recaudaciones_ventas" method="get" class="sub-grid" id="sub-item2">
+                <label for="comedor">Comedor:</label>
+                <select id="comedor" name="comedor">
+                    <option value="Comedor A">Comedor A</option>
+                    <option value="Comedor B">Comedor B</option>
+                    <option value="Comedor C">Comedor C</option>
+                    <option value="Comedor D">Comedor D</option>
+                    <option value="Comedor E">Comedor E</option>
+                    <option value="Comedor F">Comedor F</option>
+                    <option value="Comedor G">Comedor G</option>
+                    <option value="Comedor H">Comedor H</option>
+                    <option value="Comedor I">Comedor I</option>
+                    <option value="Comedor J">Comedor J</option>
+                    <option value="Comedor K">Comedor K</option>
+                    <option value="Comedor L">Comedor L</option>
+                    <option value="Comedor M">Comedor M</option>
+                    <option value="Comedor N">Comedor N</option>
+                    <option value="Comedor O">Comedor O</option>
+                    <option value="Comedor P">Comedor P</option>
+                    <option value="Comedor Q">Comedor Q</option>
+                    <option value="Comedor R">Comedor R</option>
+                </select>
+            </form>
+            <div class="content-icon">
+                <img src="../static/images/ventas.png" alt="ventas" width="95px">
+            </div>
+            <div class="content" id="content2">
+                <span class="value" id="ventas-value">{{ recaudaciones_ventas }}</span>
+            </div>
+        </div>
+
+        <div class="item-3" id="porcentaje">
+            <div class="encabezado" id="encabezado3">Porcentaje ventas | Donaciones</div>
+            <form action="" method="get" class="sub-grid" id="sub-item2">
+                <label for="comedor">Comedor:</label>
+                <select id="comedor" name="comedor">
+                    <option value="Comedor A">Comedor A</option>
+                    <option value="Comedor B">Comedor B</option>
+                    <option value="Comedor C">Comedor C</option>
+                    <option value="Comedor D">Comedor D</option>
+                    <option value="Comedor E">Comedor E</option>
+                    <option value="Comedor F">Comedor F</option>
+                    <option value="Comedor G">Comedor G</option>
+                    <option value="Comedor H">Comedor H</option>
+                    <option value="Comedor I">Comedor I</option>
+                    <option value="Comedor J">Comedor J</option>
+                    <option value="Comedor K">Comedor K</option>
+                    <option value="Comedor L">Comedor L</option>
+                    <option value="Comedor M">Comedor M</option>
+                    <option value="Comedor N">Comedor N</option>
+                    <option value="Comedor O">Comedor O</option>
+                    <option value="Comedor P">Comedor P</option>
+                    <option value="Comedor Q">Comedor Q</option>
+                    <option value="Comedor R">Comedor R</option>
+                </select>
+            </form>
+            <div class="content" id="content3">
+                <img id="dona" src="../static/images/dona.png" alt="grafica">
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctxDoughnut = document.getElementById('myDoughnutChart').getContext('2d');
+    
+        new Chart(ctxDoughnut, {
+            type: 'doughnut',
+            data: {
+                labels: ['Donaciones', 'Ventas'],
+                datasets: [{
+                    data: [200, 100], // Asegúrate de que las variables tengan los datos correctos
+                    backgroundColor: ['green', 'blue'], // Colores de las secciones del doughnut
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                aspectRatio: 1, // Puedes ajustar la relación de aspecto según tus necesidades
+            }
+        });
+    </script>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="../static/js/script_donaciones.js"></script>
+    <script src="../static/js/script_ventas.js"></script>
+    
+    
+    <script src="../static/js/app.js"></script>
+{% endblock %}

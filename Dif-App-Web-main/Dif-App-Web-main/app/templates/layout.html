@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comedores DIF</title>
+    {% block css %}
+    {% endblock %}
+
+    {% block javascript%}
+    {% endblock %}
+    <script src="../static/js/btn_navbar.js"></script>
+</head>
+<body>
+    <!--- Navbar -->
+    <header>
+        <div class="navbar">
+            <button id="toggleNav">☰</button>
+            <a href="/tablero" class="logo_Atzp">
+                <img src="../static/images/dif_logo.jpg" alt="Logo" width="150px">
+            </a>
+            <nav id="sideNav">
+                <ul>
+                    <li><a class="sidenav_links" href="/tablero">
+                        <div class="sidenav_icons">
+                            <img src="../static/images/tablero.png" alt="" width="35px">
+                        </div>
+                        Tablero
+                    </a></li>
+                    <li><a class="sidenav_links" href="/personal">
+                        <div class="sidenav_icons">
+                            <img src="../static/images/personal.png" alt="" width="35px"> 
+                        </div>
+                        Personal
+                    </a></li>
+                    <li><a class="sidenav_links" href="/recaudaciones">
+                        <div class="sidenav_icons">
+                            <img src="../static/images/rentable.png" alt="" width="35px">
+                        </div>
+                        Recaudación
+                    </a></li>
+                    <li><a class="sidenav_links" href="/inventario">
+                        <div class="sidenav_icons">
+                            <img src="../static/images/inventario.png" alt="" width="35px">
+                        </div>
+                        Inventario
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="secc_title">
+            {% block seccion %}
+            {% endblock %}
+        </div>
+
+        <nav class="user_menu">
+            <!--Depende de la base de datos-->
+            <div class="dropdown">
+                <a href="/" class="profile_nav">
+                    <img class="user" alt="Profile" src="../static/images/cerrar-sesion.png" width="30px">
+                    <span class="user_name">
+                        Cerrar sesión
+                    </span>
+                </a>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <div>
+        {% block body %}
+        {% endblock %}
+        
+        <footer>
+            <p>&copy; 2023 DIF Atizapán - Todos los derechos reservados</p>
+            <ul>
+                <li><a href="https://www.difatizapan.gob.mx/Quienes-somos.html">Quienes somos</a></li>
+                <li><a href="#">Términos de servicio</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+    {% block scripts %}
+    {% endblock %}
+
+</body>

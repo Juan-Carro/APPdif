@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "304557856478",
+    "project_id": "dif-app-8990b",
+    "storage_bucket": "dif-app-8990b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304557856478:android:2c7bcdb1791bcb1908944f",
+        "android_client_info": {
+          "package_name": "com.equipo2.logindif"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIrqvWElmjdLm9tH4wGZaanzZgLAlBAr0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

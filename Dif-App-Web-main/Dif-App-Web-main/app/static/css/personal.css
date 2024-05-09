@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 150px;
+    transition: margin-left 0.3s ease-in-out;
+    background: #f4f4f4;
+    
+}
+
+body.side-nav-open{
+    margin-left: 118px; /* Ancho del sidenav */
+    transition: margin-left 0.3s ease-in-out;
+}
+
+header {
+    background-color: #8f4a8b;
+    color: white;
+    padding: 0px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    z-index: 2;
+    left: 0 ;
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+#toggleNav {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#sideNav {
+    width: 250px;
+    height: 100%;
+    background-color: #8f4a8b;
+    position:fixed;
+    left: -250px;
+    top: 0;
+    transition: left 0.3s ease-in-out;
+    margin-top: 80px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+}
+
+#sideNav.open {
+    left: 0;
+}
+
+.sidenav_links{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sidenav_icons{
+    margin: 15px;
+    margin-left: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #966293;
+}
+
+a.logo_Atzp{
+    padding: 2px;
+}
+
+a.logo_Atzp, .profile_nav:hover{
+    background-color: #8f4a8b;
+}
+
+.profile_nav{
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user_name{
+    margin: 20px;
+    font-size: 20px;
+}
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.user_menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    font-style: oblique;
+}
+
+.dashb_personal{
+    height: 100vh;
+    margin-left: 0;
+    transition: margin-left 0.5s;
+}
+
+.container{
+    margin: 180px;
+    margin-left: 70px;
+    margin-right: 70px;
+    height: 60%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(470px, 1fr);
+    gap: 30px;
+    align-content: center;
+}
+
+.sub-grid{
+    text-align: end;
+}
+
+.item-4{
+    background-color: white;
+    border-radius: 9px;
+    padding: 15px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    margin-left: 350px;
+    margin-right: 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 18fr;
+    gap: 0;
+    height: 60%;
+}
+
+.filter_btn{
+    color: black;
+}
+
+.encabezado{
+    grid-row: 1;
+    grid-column: auto;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.encabezado span{
+    color: #899bbd;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.content{
+    grid-row: 2;
+    grid-column: 1 / span 3;
+    box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.2);
+    margin: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.filter_comedor{
+    margin-left: 80px;
+    margin-right: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #8f4a8b; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Alineación de texto al centro */
+}
+
+/* Estilo para los enlaces en el pie de página */
+footer a {
+    color:#abb2c1; /* Color de los enlaces */
+    text-decoration: none; /* Elimina la subraya predeterminada de los enlaces */
+    margin: 0 10px; /* Márgenes horizontales entre los enlaces */
+}
+
+/* Estilo para los enlaces en el pie de página al pasar el ratón */
+footer a:hover {
+    text-decoration: underline; /* Agrega subraya al pasar el ratón */
+}
+
+.secc_title{
+    align-self: center;
+    font-size: 20px;
+}

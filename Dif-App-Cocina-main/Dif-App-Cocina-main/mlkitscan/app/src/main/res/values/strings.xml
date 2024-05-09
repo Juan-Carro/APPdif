@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">mlkitscan</string>
+    <string name="no_data">NO DATA</string>
+    <string name="click_para_comenzar_el_escaneo">Click para comenzar el escaneo</string>
+    <string name="reiniciar">Reiniciar</string>
+    <string name="iniciar" />
+    <string name="iniciar_aplicacion">iniciar aplicacion</string>
+    <string name="aca_ira_el_texto">aca ira el texto</string>
+</resources>

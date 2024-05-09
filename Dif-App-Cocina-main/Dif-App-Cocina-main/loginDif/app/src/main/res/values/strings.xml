@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">loginDif</string>
+    <string name="iniciar_sesi_n">INICIAR SESIÓN</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="correo_electronico">Correo Electronico</string>
+    <string name="iniciar">INICIAR</string>
+    <string name="registrarse">REGISTRARSE</string>
+</resources>

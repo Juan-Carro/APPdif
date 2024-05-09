@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">aplicacionFinal</string>
+    <string-array name="opciones_array">
+        <item>Ninguna</item>
+        <item>Discapacidad Visual</item>
+        <item>Discapacidad Fisica</item>
+        <item>Embarazo</item>
+        <item>Postración</item>
+    </string-array>
+    <string-array name="tipos_cierre">
+        <item>Seleccionar</item>
+        <item>Incidente de Robo</item>
+        <item>Problema de Salud Pública</item>
+        <item>Accidente en las Instalaciones</item>
+        <item>Problemas con Proveedores</item>
+        <item>Problema con Alimentos</item>
+        <item>Emergencia Ambiental</item>
+    </string-array>
+
+
+</resources>

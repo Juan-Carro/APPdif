@@ -1,0 +1,66 @@
+{% extends 'layout.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="../static/css/home.css">
+{% endblock %}
+
+{% block seccion %}
+<a href="/inventario">Inventario</a>
+{% endblock%}
+
+{% block body %}
+    <!-- Contenido de las secciones -->
+<div class="dashboard">
+
+    <div class="inventario_container">
+        <div class="item-inventario" id="inventario">
+            <div class="encabezado" id="encabezado-inventario">
+                Inventario
+                <span>| Por comedor</span>
+            </div>
+            <form action="/inventario_lista" method="get" class="sub-grid" id="sub-item-inventario">
+                <label for="comedor">Comedor:</label>
+                <select id="comedor" name="comedor">
+                    <option value="Comedor A">Comedor A</option>
+                    <option value="Comedor B">Comedor B</option>
+                    <option value="Comedor C">Comedor C</option>
+                    <option value="Comedor D">Comedor D</option>
+                    <option value="Comedor E">Comedor E</option>
+                    <option value="Comedor F">Comedor F</option>
+                    <option value="Comedor G">Comedor G</option>
+                    <option value="Comedor H">Comedor H</option>
+                    <option value="Comedor I">Comedor I</option>
+                    <option value="Comedor J">Comedor J</option>
+                    <option value="Comedor K">Comedor K</option>
+                    <option value="Comedor L">Comedor L</option>
+                    <option value="Comedor M">Comedor M</option>
+                    <option value="Comedor N">Comedor N</option>
+                    <option value="Comedor O">Comedor O</option>
+                    <option value="Comedor P">Comedor P</option>
+                    <option value="Comedor Q">Comedor Q</option>
+                    <option value="Comedor R">Comedor R</option>
+                </select>
+            </form>
+            <div class="content" id="lista-productos">
+                <table>
+                    <tr>
+                        <th>Cantidad</th>
+                        <th>Descripción</th>
+                        <th>Presentación</th>
+                        <th>Unidad de Medida</th>
+                    </tr>
+                    <tbody id="productos-body">
+                        <!-- Los datos de los productos se cargarán aquí -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="../static/js/inventario.js"></script>
+{% endblock %}
